@@ -12,7 +12,7 @@ class Child extends Component{
         <button onClick={this.props.onAgeDown}>AGE DOWN</button>
 
       </>
-    )
+    ) 
 
   }
 }
