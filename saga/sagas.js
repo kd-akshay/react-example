@@ -10,7 +10,7 @@ function* doSomething(){
 export function* ageWatcher(){
   
  yield takeEvery('AGE_UP',doSomething);
- debugger;
+
  
 
 }

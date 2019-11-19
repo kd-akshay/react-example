@@ -20,12 +20,24 @@ export default class Users extends Component {
       </>
     );
   }
-  getData = () => {
+  getData = async () => {
     console.log("inside getData");
-    axios.get(`https://jsonplaceholder.typicode.com/users`).then(res => {
-      const persons = res.data;
-      console.table(persons);
-      this.setState({ persons });
-    });
+    // axios.get(`https://jsonplaceholder.typicode.com/users`).then(res => {
+    //   const persons = res.data;
+    //   console.table(persons);
+    //   this.setState({ persons });
+    // });
+
+    let res= await axios.get("https://jsonplaceholder.typicode.com/comments");
+    if(res){
+      console.log(res.data);
+
+      var tst={...state}
+      this.setState(tst)
+
+      
+    }
+
+    console.log("outside getData");
   };
 }
