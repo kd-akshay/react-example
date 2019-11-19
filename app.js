@@ -5,7 +5,7 @@ import { render } from 'react-dom';
 import Hello from './Hello';
 import Child from './child'
 import Child2 from './child2'
-
+import Users from './users';
 import './style.css';
 
 export default class App extends Component {
@@ -37,6 +37,8 @@ export default class App extends Component {
         {this.state.test}
          <br/>
         <hr/>
+
+        <Users></Users>
         <p>
           LINK SECTION BELOW
         </p>
@@ -47,8 +49,8 @@ export default class App extends Component {
      
         <Link to="/child2" > Child2 &nbsp;&nbsp;</Link>
     
-        <Link to="/hello"> Hello    </Link>
-
+        <Link to="/hello"> Hello  &nbsp;&nbsp;</Link>
+         <Link to="/users"> Users    </Link>
         <p>
         <hr/>
          ROUTE SECTION BELOW
@@ -58,6 +60,8 @@ export default class App extends Component {
         <Route path='/child' exact strict  component={Child}></Route>
  
         <Route path='/child2' exact strict  render={()=>{return(<Child2 test={this.state.test} changeValue={this.changeTest} changeDynamic={this.changeDynamic.bind(this)}></Child2>)}}></Route>
+        <Route path='/users' exact strict  component={Users}></Route>
+         
         
       </div>
     );
