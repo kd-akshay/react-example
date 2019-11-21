@@ -28,16 +28,6 @@ export default class Users extends Component {
       this.setState({ persons });
     });
 
-    // let res= await axios.get("https://jsonplaceholder.typicode.com/comments");
-    // if(res){
-    //   console.log(res.data);
-
-    //   var tst={...state}
-    //   this.setState(tst)
-
-      
-    // }
-
     console.log("outside getData");
   };
 }
